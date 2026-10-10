@@ -1,12 +1,11 @@
-
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 import json
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Git and GitHub Assignment - To-Do Application"
+    return render_template("index.html")
 
 @app.route("/api")
 def api():
