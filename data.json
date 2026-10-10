@@ -1,5 +1,6 @@
+
 {
-  "message": "Main branch API message",
-  "status": "main",
+  "message": "Welcome to the To-Do API",
+  "status": "success",
   "version": 1
 }

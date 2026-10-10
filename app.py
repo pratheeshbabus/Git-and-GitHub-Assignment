@@ -1,5 +1,6 @@
 
 from flask import Flask, jsonify
+import json
 
 app = Flask(__name__)
 
@@ -9,10 +10,9 @@ def home():
 
 @app.route("/api")
 def api():
-    return jsonify({
-        "message": "Welcome to the To-Do API",
-        "status": "success"
-    })
+    with open("data.json", "r") as file:
+        data = json.load(file)
+    return jsonify(data)
 
 if __name__ == "__main__":
     app.run(debug=True)
